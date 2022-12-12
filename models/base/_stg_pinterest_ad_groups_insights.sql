@@ -3,8 +3,8 @@
         unique_key='unique_key'
 ) }}
 
-{%- set schema_name, table_name = 'pinterest_raw', 'ad_group_report' -%}
-{% set raw_tables = dbt_utils.get_relations_by_pattern('pinterest_raw%', 'ad_group_report') %}
+{%- set schema_name, table_name = 'pinterest_raw_uk', 'ad_group_report' -%}
+{% set raw_tables = dbt_utils.get_relations_by_pattern('pinterest_raw_uk%', 'ad_group_report') %}
 
 {%- set exclude_fields = [
     "campaign_status",
