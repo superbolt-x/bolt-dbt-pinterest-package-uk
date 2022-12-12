@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: pinterest_raw
-    schema: pinterest_raw
+  - name: pinterest_raw_uk
+    schema: pinterest_raw_uk
     tables:
       - name: advertisers
         identifier: advertiser_history   
@@ -12,25 +12,25 @@ sources:
       - name: ad_group_report
       
 models:
-  - name: pinterest_advertisers
+  - name: pinterest_uk_advertisers
     columns:
       - name: advertiser_id
         tests: 
           - unique
           - not_null
-  - name: pinterest_campaigns
+  - name: pinterest_uk_campaigns
     columns:
       - name: campaign_id
         tests: 
           - unique
           - not_null
-  - name: pinterest_ad_groups 
+  - name: pinterest_uk_ad_groups 
     columns:
       - name: ad_group_id
         tests: 
           - unique
           - not_null
-  - name: _stg_pinterest_ad_groups_insights 
+  - name: _stg_pinterest_uk_ad_groups_insights 
     columns:
       - name: unique_key
         tests: 
