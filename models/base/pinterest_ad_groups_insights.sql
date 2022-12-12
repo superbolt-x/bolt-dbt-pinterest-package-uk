@@ -17,7 +17,7 @@
 ]
 -%}
 
-{%- set stg_fields = adapter.get_columns_in_relation(ref('_stg_pinterest_ad_groups_insights'))
+{%- set stg_fields = adapter.get_columns_in_relation(ref('_stg_pinterest_uk_ad_groups_insights'))
                     |map(attribute="name")
                     |reject("in",exclude_fields)
                     -%}  
@@ -44,7 +44,7 @@ WITH
         {%- endif -%}
         {%- if not loop.last %},{%- endif %}
         {%- endfor %}
-    FROM {{ ref('_stg_pinterest_ad_groups_insights') }}
+    FROM {{ ref('_stg_pinterest_uk_ad_groups_insights') }}
     {%- if var('currency') != 'USD' %}
     LEFT JOIN currency USING(date)
     {%- endif %}
