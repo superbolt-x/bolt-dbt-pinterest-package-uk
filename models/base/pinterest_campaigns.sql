@@ -6,8 +6,8 @@
     "daily_spend_cap",
     "updated_time"
 ] -%}
-{%- set schema_name, table_name = 'pinterest_raw', 'campaigns' -%}
-{% set raw_tables = dbt_utils.get_relations_by_pattern('pinterest_raw%', 'campaign_history') %}
+{%- set schema_name, table_name = 'pinterest_raw_uk', 'campaigns' -%}
+{% set raw_tables = dbt_utils.get_relations_by_pattern('pinterest_raw_uk%', 'campaign_history') %}
 
 WITH raw_data AS 
     ({{ dbt_utils.union_relations(relations = raw_tables) }}),
