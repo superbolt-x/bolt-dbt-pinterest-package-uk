@@ -6,8 +6,8 @@
     "status",
     "updated_time"
 ] -%}
-{%- set schema_name, table_name = 'pinterest_raw', 'advertisers' -%}
-{% set raw_tables = dbt_utils.get_relations_by_pattern('pinterest_raw%', 'advertiser_history') %}
+{%- set schema_name, table_name = 'pinterest_raw_uk', 'advertisers' -%}
+{% set raw_tables = dbt_utils.get_relations_by_pattern('pinterest_raw_uk%', 'advertiser_history') %}
 
 WITH raw_data AS 
     ({{ dbt_utils.union_relations(relations = raw_tables) }}),
