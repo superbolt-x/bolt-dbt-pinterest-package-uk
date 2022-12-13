@@ -31,7 +31,7 @@ vars:
 
 
 models:
-  bolt_dbt_pinterest_package:
+  bolt_dbt_pinterest_package_uk:
     base:
       +schema: pinterest_base
       +materialized: table
